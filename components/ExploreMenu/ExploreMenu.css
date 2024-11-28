@@ -1,0 +1,98 @@
+/* step 10:- File include all css of banner images that display, below the home page main header image */
+
+/* for main div tag belowthe header img present on home page */
+.explore-menu {
+    top: 130px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+}
+
+/* CSS For Heading (Explore our menu) */
+.explore-menu h1 {
+    color: #262626;
+    font-weight: 500;
+    font-size: 26px;
+    margin-bottom: 15px;
+    margin-top: calc(var(--navbar-height, 70px) + 30px); /* Add spacing based on navbar height */
+
+}
+
+
+
+/* CSS for show list */
+.explore-menu-list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    text-align: center;
+    margin: 20px 0px;
+    overflow-x: scroll;
+    margin: 0vw 5vw;
+   padding:25px;
+}
+
+/* CSS for banner rounded images */
+.explore-menu-list-item img {
+    width: 25vw;
+    height: 110px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 10px;
+    cursor: pointer;
+    transition: 0.2s;
+    border: 1px  solid black;
+}
+
+/* CSS for mobile and smaller screens */
+@media (max-width: 768px) {
+    .explore-menu-list-item img {
+      width: 30vw; /* Make the image slightly larger on smaller screens */
+      max-width: 120px; /* Limit the width on small devices */
+      min-width: 80px; /* Ensure the image does not shrink too much */
+    }
+  }
+  
+  /* CSS for extra small screens (e.g., mobile phones) */
+  @media (max-width: 480px) {
+    .explore-menu-list-item img {
+      width: 40vw; /* Make the image larger for very small screens */
+      max-width: 100px; /* Keep the image width under control */
+      min-width: 70px; /* Set a lower limit for the image width */
+    }
+  }
+
+/* hover banner img */
+.explore-menu-list-item img:hover{
+    opacity: 0.8; /* Reduces opacity on hover */
+    transform: scale(1.1); /* Slightly zooms in the image by 10% on hover. */
+}
+
+/* CSS for image name */
+.explore-menu-list-item p {
+    font-size: 16px;
+    margin: 0;
+    cursor: pointer;
+}
+
+/* add scrollbar for menu scroll */
+.explore-menu-list::-webkit-scrollbar {
+    display: none;
+}
+
+/* CSS for add normal horizontal line */
+.explore-menu hr {
+    margin: 10px 0px;
+    height: 2px;
+    background-color: #e2e2e2;
+    border: none;
+    margin-left: 5vw;
+    margin-right: 4vw;
+}
+/* CSS for show active banner img */
+.explore-menu-list-item .active{
+    border: 4px solid green; 
+    padding: 2px;
+}

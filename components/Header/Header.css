@@ -1,0 +1,74 @@
+/* step 6:-  give css for all main heading and  for adding some animation to text, when page reload, it take some time and then show the heading,
+ for that created keyframe fadeIn  in index .css hence goto to index.css for code  */
+/* Define a CSS variable for the navbar height */
+:root {
+    --navbar-height: 70px; /* Adjust as per your navbar height */
+  }
+
+ .header{
+    height: 34vw;
+    margin: 40px ;
+    background: url('/public/food-bg.avif') no-repeat;
+    background-size: contain;
+    position: relative;
+    border-radius: 10px;
+    background-size: cover;
+    background-position: center;
+    filter: grayscale(10%); 
+    margin-top: calc(var(--navbar-height, 70px) + 40px); /* Add spacing based on navbar height */
+
+}
+/* For div tag position and display  */
+
+.header-contents{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 1.5vw;
+    max-width: 50%;
+    bottom: 10%;
+    left: 6vw;
+    animation: fadeIn 3s;
+}
+/* for main heading within a div tag */
+.header-contents h2{
+    font-weight: 500;
+    font-size: max(4.5vw, 22px);
+}
+/* for subheading within a div tag */
+.header-contents p{
+    color: black;
+    font-size: 1vw;
+    font-weight: 440;
+}
+/* for button style */
+.header-contents button{
+    border: none;
+    color: #747474;
+    font-weight: 500;
+    padding: 1vw 2.3vw;
+    background-color: white;
+    font-size: max(1vw,13px);
+    border-radius: 50px;
+}
+
+@media (max-width:1050px){
+    
+    .header-contents{
+        max-width: 45%;
+    }
+}
+
+@media (max-width:750px){
+    
+    .header-contents{
+        max-width: 65%;
+    }
+    .header-contents p{
+        display: none;
+    }
+    .header-contents button{
+        padding: 2vw 4vw;
+    }
+}
